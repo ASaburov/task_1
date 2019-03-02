@@ -1,9 +1,6 @@
 package shop;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -20,6 +17,8 @@ class CartTest {
         System.out.println("...");
     }
 
+    // DISABLED TEST
+    @Disabled
     @Test
     @DisplayName("Checking the getCartName() method")
     void getCartName() {
@@ -37,6 +36,7 @@ class CartTest {
         RealItem realItem = new RealItem();
         realItem.setPrice(priceOfRealItem);
         testCart.addRealItem(realItem);
+        // GROUPED ASSERTION
         assertAll("realItem",
                 //assertion checks that totalPrice of the testCart != null
                 () -> assertNotNull(testCart.getTotalPrice()),

@@ -18,7 +18,6 @@ class RealItemTest {
 
     @Test
     @DisplayName("Checking the setWeight() method")
-    @Disabled
     void setWeight() {
         RealItem iron = new RealItem();
         iron.setWeight(2.5);
