@@ -1,30 +1,15 @@
 package shop;
 
-import org.junit.jupiter.api.*;
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class RealItemTest {
 
-    @BeforeEach
-    void setUp() {
-        System.out.println("Starting the validation of the RealItem class");
-    }
-
-    @AfterEach
-    void tearDown() {
-        System.out.println("The validation of the RealItem class has been completed");
-    }
-
     @Test
-    @DisplayName("Checking the setWeight() method")
-    void setWeight() {
+    void realItemToString() {
         RealItem iron = new RealItem();
         iron.setWeight(2.5);
-        double actual = iron.getWeight();
-        double expected = 2.5;
-        assertNotNull(actual);
-        assertEquals(expected, actual);
+        assertEquals("Class: class shop.RealItem; Name: null; Price: 0.0; Weight: "+ iron.getWeight(), iron.toString());
     }
 
 }

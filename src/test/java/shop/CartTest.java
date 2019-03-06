@@ -1,32 +1,11 @@
 package shop;
 
-import org.junit.jupiter.api.*;
-
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CartTest {
-
-
-    @BeforeEach
-    void setUp() {
-        System.out.println(".");
-    }
-
-    @AfterEach
-    void tearDown() {
-        System.out.println("...");
-    }
-
-    // DISABLED TEST
-    @Disabled
-    @Test
-    @DisplayName("Checking the getCartName() method")
-    void getCartName() {
-        Cart testCart = new Cart("testCart");
-        String actualTestCartName = testCart.getCartName();
-        String expectedCartName = "testCart";
-        assertEquals(expectedCartName, actualTestCartName);
-    }
 
     @Test
     @DisplayName("Checking the addRealItem() method: ensure that Tax is included")
